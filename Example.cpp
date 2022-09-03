@@ -6,9 +6,12 @@ public:
     CMyFrame() {
         //// call the Create() method, which will create a frame/window.
         //Create(NULL, _T("MFC Application Tutorial"));
-        // 
-        // WS_VISIBLE, WS_OVERLAPPED 스타일을 적용하면 최소화, 최대화, 닫기 옵션인 나타나지 않는다.
-        Create(NULL, _T("MFC Application Tutorial"), WS_VISIBLE | WS_OVERLAPPED);
+
+        //// WS_VISIBLE, WS_OVERLAPPED 스타일을 적용하면 최소화, 최대화, 닫기 옵션인 나타나지 않는다.
+        //Create(NULL, _T("MFC Application Tutorial"), WS_VISIBLE | WS_OVERLAPPED);
+
+        // Windows Dimensions : Win32's RECT structure, the MFC provides the CRect class
+        Create(NULL, _T("MFC Application Tutorial"), WS_SYSMENU, CRect(90, 120, 550, 480));
     }
 };
 
